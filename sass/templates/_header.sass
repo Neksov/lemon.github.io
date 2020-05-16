@@ -2,13 +2,26 @@
   &__logo
     display: flex
     justify-content: center
-    padding-top: 17.857rem
-    padding-bottom: 8.5rem
+    padding-top: 15.7rem
+    padding-bottom: 7.2rem
 .menu
   display: flex
+  align-items: center
+  justify-content: space-between
   box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
   background-color: #f8f8f8
+  height: 123px
+  cursor: pointer
+  z-index: 6
+  margin-left: 20px
+  margin-right: 20px
+
+  &__logo
+    padding-left: 94px
+    padding-right: 45px
   nav
+    padding-top: 8px
+    margin: auto
     ul
       list-style: none
       margin: 0
@@ -17,43 +30,121 @@
       text-decoration: none
       outline: none
       display: block
-      transition: .4s ease-in-out
+      &:hover
+        transition: all 0.4s ease-in-out
+        opacity: 0.6
 .topmenu 
   text-align: center
-  padding: 10px 0
   li 
     display: inline-block
     position: relative
     a 
+      display: block
       font-size: 16px
       font-weight: 300
       text-transform: uppercase
-      letter-spacing: 0.4px
-      letter-spacing: 0.4px
+      letter-spacing: -0.7px
       color: $black
+      padding: 10px 
+
 .submenu 
   position: absolute
-  left: 50%
+  width: 150px
+  left: -40%
   top: 100%
-  width: 210px
-  margin-left: -105px
-  background: #fafafa
-  border: 1px solid #ededed
-  z-index: 5
-  visibility: hidden
+  margin-right: 150px
+  box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
+  background-color: $light
   opacity: 0
-  transform: scale(.8)
-  transition: .4s ease-in-out
+  visibility: hidden
+  transition: 0.4s ease-in-out
+  transform: scale(0.3)
+  z-index: 999
+
   li 
     a 
       padding: 10px 0
       margin: 0 10px
-      border-bottom: 1px solid #efefef
-      font-size: 12px
-      color: #484848
-      font-family: 'Kurale', serif
-
-.topmenu > li:hover .submenu 
+      color: $black
+      font-size: 16px
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 0.4px
+      &::after 
+        content: ""
+        display: block
+        height: 1px
+        background-color: rgb(15, 15, 15)
+        transition: 0.2s
+        width: 0%
+      &:hover 
+        &:after 
+          width: 100%
+.submenu2
+  position: absolute
+  width: 150px
+  left: 5%
+  top: 100%
+  margin-right: 150px
+  box-shadow: 1px 3px 7px rgba(11, 12, 12, 0.14)
+  background-color: $light
+  opacity: 0
+  visibility: hidden
+  transition: 0.4s ease-in-out
+  transform: scale(0.3)
+  z-index: 999
+  li 
+    a 
+      padding: 10px 0
+      margin: 0 10px
+      color: $black
+      font-size: 16px
+      font-weight: 300
+      text-transform: uppercase
+      letter-spacing: 0.4px
+      &::after 
+        content: ""
+        display: block
+        height: 1px
+        background-color: rgb(15, 15, 15)
+        transition: 0.2s
+        width: 0%
+      &:hover 
+        &:after 
+          width: 100%
+.topmenu > li:hover .submenu, li:hover .submenu2
   visibility: visible
-  opacity: 1
   transform: scale(1)
+  opacity: 0.5
+.search
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-around
+  border: 1px solid #c2c2c2
+  width: 164px
+  cursor: pointer
+  &-img
+    margin: auto  
+  &:hover
+    box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
+
+.btn
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  transition: all 0.4s ease-in-out
+  &-images
+    width: 20px
+    height: 20px
+    padding-right: 5px
+  &__enter
+    padding: 4px
+    margin-right: 20px
+    margin-left: 20px
+  &__name
+    font-size: 14px
+    font-weight: 300
+    text-transform: uppercase
+
+

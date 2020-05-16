@@ -1,66 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="css/swiper.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animate.min.css" media="all" />
-    <title>Lemon</title>
-  </head>
 
-  <body>
-    <header>
-      <section class="header">
-        <div class="container">
-          <div class="header__logo">
-            <img src="img/logo.png" alt="logo" class="header__logo-logo" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="css/swiper.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animate.min.css" media="all" />
+  <title>Lemon</title>
+</head>
+
+<body>
+  <header>
+    <section class="header">
+      <div class="container">
+        <div class="header__logo">
+          <img src="img/logo.png" alt="logo" class="header__logo-logo" />
+        </div>
+        <div class="menu header__menu">
+          <logo class="menu__logo">
+            <a href="index.html"> <img src="img/Lemon_Logo_mini.png" alt="logo" /></a>
+          </logo>
+          <nav>
+            <ul class="topmenu">
+              <li><a href="#">Home</a>
+                <ul class="submenu">
+                  <li><a href="#">RECOMMENDED</a></li>
+                  <li><a href="#">POPULAR</a></li>
+                  <li><a href="#"> QUICK & EASY</a></li>
+                  <li><a href="#">HEALTHY</a></li>
+                  <li><a href="#">NEWEST</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Recipes</a>
+                <ul class="submenu">
+                  <li><a href="#">RECOMMENDED</a></li>
+                  <li><a href="#">POPULAR</a></li>
+                  <li><a href="#"> QUICK & EASY</a></li>
+                  <li><a href="#">HEALTHY</a></li>
+                  <li><a href="#">NEWEST</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Photo Galleries</a>
+                <ul class="submenu2">
+                  <li><a href="#">RECOMMENDED</a></li>
+                  <li><a href="#">POPULAR</a></li>
+                  <li><a href="#"> QUICK & EASY</a></li>
+                  <li><a href="#">HEALTHY</a></li>
+                  <li><a href="#">NEWEST</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Videos</a>
+                <ul class="submenu">
+                  <li><a href="#">RECOMMENDED</a></li>
+                  <li><a href="#">POPULAR</a></li>
+                  <li><a href="#"> QUICK & EASY</a></li>
+                  <li><a href="#">HEALTHY</a></li>
+                  <li><a href="#">NEWEST</a></li>
+                </ul>
+              </li>
+              <li><a href="#">All Categories</a>
+                <ul class="submenu2">
+                  <li><a href="#">RECOMMENDED</a></li>
+                  <li><a href="#">POPULAR</a></li>
+                  <li><a href="#"> QUICK & EASY</a></li>
+                  <li><a href="#">HEALTHY</a></li>
+                  <li><a href="#">NEWEST</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__search">
+            <label class="search">
+              <span class="search-img"><img src="img/Search_Icon.png" alt="search"></span>
+              <input type="text" class="input input-search" placeholder="Find a recipe" />
+            </label>
           </div>
-          <div class="menu header__menu">
-            <logo class="menu__logo">
-              <img src="img/Lemon_Logo_mini.png" alt="logo" />
-            </logo>
-            <nav>
-              <ul class="topmenu">
-                <li><a href="">Home</a></li>
-                <li>
-                  <a href="">Recipes</a>
-                  <ul class="submenu">
-                    <li><a href="">RECOMMENDED</a></li>
-                    <li><a href="">POPULAR</a></li>
-                    <li><a href="">QUICK & EASY</a></li>
-                    <li><a href="">HEALTHY</a></li>
-                    <li><a href="">NEWEST</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">Photo Galleries</a>
-                  <ul class="submenu">
-                    <li><a href="">RECOMMENDED</a></li>
-                    <li><a href="">POPULAR</a></li>
-                    <li><a href="">QUICK & EASY</a></li>
-                    <li><a href="">HEALTHY</a></li>
-                    <li><a href="">NEWEST</a></li>
-                  </ul>
-                </li>
-                <li><a href="">Videos</a></li>
-                <li><a href="">All Categories</a></li>
-              </ul>
-            </nav>
+          <button class="btn  btn--light btn__enter">
+            <img src="img/sign-in-alt-solid.svg" alt="Enter" class="btn-images">
+            <span class="btn__name">log in</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="swiper-container  slider-gallery">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="hero__img"><img src="img/hero.jpg" alt="logo"></div>
+            <div class="info hero__info">
+              <div class="info__img"><img src="img/Logo__hero.png" alt="recepe"></div>
+              <div class="info__title">Bananas Foster Ice Cream Cake</div>
+              <div class="info__text">
+                If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly,
+                this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
+              </div>
+              <button class="btn btn--light info__btn">GET IT RECIPE</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__img"><img src="img/hero1.jpg" alt="logo"></div>
+            <div class="info hero__info">
+              <div class="info__img"><img src="img/Logo__hero.png" alt="recepe"></div>
+              <div class="info__title">Bananas Foster Ice Cream Cake</div>
+              <div class="info__text">
+                If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly,
+                this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
+              </div>
+              <button class="btn btn--light info__btn">GET IT RECIPE</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__img"><img src="img/hero3.png" alt="logo"></div>
+            <div class="info hero__info">
+              <div class="info__img"><img src="img/Logo__hero.png" alt="recepe"></div>
+              <div class="info__title">Bananas Foster Ice Cream Cake</div>
+              <div class="info__text">
+                If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly,
+                this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
+              </div>
+              <button class="btn btn--light info__btn">GET IT RECIPE</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__img"><img src="img/hero2.png" alt="logo"></div>
+            <div class="info hero__info">
+              <div class="info__img"><img src="img/Logo__hero.png" alt="recepe"></div>
+              <div class="info__title">Bananas Foster Ice Cream Cake</div>
+              <div class="info__text">
+                If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly,
+                this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
+              </div>
+              <button class="btn btn--light info__btn">GET IT RECIPE</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hero__img"><img src="img/hero.jpg" alt="logo"></div>
+            <div class="info hero__info">
+              <div class="info__img"><img src="img/Logo__hero.png" alt="recepe"></div>
+              <div class="info__title">Bananas Foster Ice Cream Cake</div>
+              <div class="info__text">
+                If you're looking for decadence, look no further — you've found the Holy Grail of desserts. Honestly,
+                this cake makes us wonder why Bananas Foster hasn't always been served on top of ice cream cake.
+              </div>
+              <button class="btn btn--light info__btn">GET IT RECIPE</button>
+            </div>
           </div>
         </div>
-      </section>
-    </header>
-    <main></main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/jquery.mask.min.js"></script>
-    <script src="js/wow.min.js"></script>
-  </body>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section class="recipees">
+      <!-- Swiper -->
+      <div class="swiper-container slider-gallery1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slider-gallery1__slide">
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe1.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Raspberry & Cream Frozen Yogurt Pie</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">35mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">7</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">14</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe2.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Giant Ice Cream Sandwich</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">20mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">356</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe3.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Dark Chocolate Crunch Ice Cream
+                Sandwich Cake</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">15mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">167</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slider-gallery1__slide">
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe1.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Raspberry & Cream Frozen Yogurt Pie</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">35mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">7</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">14</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe2.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Giant Ice Cream Sandwich</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">20mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">356</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe3.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Dark Chocolate Crunch Ice Cream
+                Sandwich Cake</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">15mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">167</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide slider-gallery1__slide">
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe1.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Raspberry & Cream Frozen Yogurt Pie</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">35mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">7</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">14</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe2.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Giant Ice Cream Sandwich</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">20mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">356</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="img/recipe3.jpg" alt="recipe">
+              </div>
+              <div class="card__title">Dark Chocolate Crunch Ice Cream
+                Sandwich Cake</div>
+              <div class="info2 card__info2">
+                <div class="info2__time"><img src="img/time.png" alt="time">15mins</div>
+                <div class="info2__comment"><img src="img/comment.png" alt="time">4</div>
+                <div class="info2__view"><img src="img/view.png" alt="time">167</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/wow.min.js"></script>
+</body>
+
 </html>
