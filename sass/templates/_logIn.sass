@@ -1,0 +1,125 @@
+.logIn
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100% //от родительского блока body 
+  background-color: rgba($light ,0.8 ) //прозрачность 60%
+  display: flex
+  align-items: center
+  justify-content: center
+  overflow: auto
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    width: 328px
+    height: 406px
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+    background-color: #ffffff
+    padding-top: 0px
+    padding-left: 31px
+    padding-right: 32px
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    width: 28px
+    height: 28px
+    background: transparent url(../img/close.svg) no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline: none
+  &__title
+    color: $black
+    font-family: "Josefin Sans"
+    font-size: 20px
+    font-weight: 400
+    letter-spacing: -0.5px
+    &::after
+      position: absolute
+      display: block
+      content: ''
+      width: 271px
+      height: 2px
+      background-color: #555555
+      opacity: 0.2
+      top: 46px
+  &__lemon
+    color: $black
+    font-family: "Josefin Sans"
+    font-size: 16px
+    font-weight: 300
+    letter-spacing: -0.8px
+    margin-bottom: 20px
+    margin-top: 35px
+  &__btn
+    margin-top: 30px
+    margin-left: 81px
+    width: 105px
+    height: 28px
+    padding-top: 9px
+.policy
+  &__checkbox
+    width: 11px
+    height: 10px
+    margin-right: 3px
+    cursor: pointer
+  &__label
+    margin-right: 37px
+    cursor: pointer
+.logIn
+  &__policy
+    display: flex
+    flex-direction: row
+    align-items: end
+    opacity: 0.54
+    color: $black
+    font-family: "Josefin Sans"
+    font-size: 12px
+    font-weight: 400
+    letter-spacing: 0.3px
+    cursor: pointer
+  &__social
+    display: flex
+    flex-direction: row
+    align-items: baseline
+    justify-content: center
+    margin-top: 21px
+    img
+      padding-left: 9px
+      padding-right: 9px
+      transition: all 0.4s ease-in-out
+      &:hover
+        transform: scale(1.2)
+  &__accaunt
+    position: relative
+    opacity: 0.54
+    color: $black
+    font-family: "Josefin Sans"
+    font-size: 16px
+    font-weight: 400
+    letter-spacing: -0.8px
+    text-align: center
+    padding-top: 12px
+    cursor: pointer
+    &::after //нижнее подчеркивание
+      position: absolute
+      content: ""
+      display: block
+      height: 1px
+      border-radius: 2px
+      background-color: $black
+      width: 0%
+      left: 50%
+      transition: width .3s ease-in-out
+      transform: translateX(-50%)
+    &:hover
+      &:after
+        width: 80%

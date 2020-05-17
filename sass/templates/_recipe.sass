@@ -1,0 +1,86 @@
+.recipe
+  margin-bottom: 85px
+  margin-left: 20px
+  margin-right: 20px
+  &__page
+    max-width: 1120px
+    max-height: 438px
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
+    background-color: #ffffff
+    margin: auto
+    display: flex
+.page
+  overflow: hidden
+  &__img
+    position: relative
+    &-saveicon
+      position: absolute
+      right: 20px
+      transition: 0.4s ease-in-out
+      cursor: pointer
+      &:hover
+        transform: scale(1.2)
+.info3
+  margin-left: 36px
+  margin-top: 28px
+  &__name
+    color: $darkgreen
+    font-family: "Playfair Display - Black"
+    font-size: 32px
+    font-weight: 400
+    letter-spacing: 0.8px
+  &__card
+    color: #555555
+    font-weight: 300
+    display: flex
+    align-items: baseline
+    justify-content: left
+    margin-top: 16px
+    &-time
+      font-family: "Open Sans"
+      font-size: 16px
+      letter-spacing: 0.4px
+    &-level
+      font-family: "Josefin Sans"
+      font-size: 18px
+      letter-spacing: 0.45px
+      position: relative
+      margin-left: 13px
+  &__btn
+    margin-left: 20px
+    padding-right: 13px
+    padding-left: 13px
+    &-author
+      margin-left: 132px
+      padding-right: 13px
+      padding-left: 13px
+  &__menu
+    overflow: auto
+    max-width: 512px
+    height: 265px
+    margin-top: 24px
+    line-height: 19px
+    color: $black
+    font-weight: 300
+    letter-spacing: -0.9px
+    font-family: "Josefin Sans"
+    font-size: 16px
+    &-structure
+      margin-right: 25px
+    &-name
+      font-family: "Playfair Display"
+      font-weight: 700
+      padding-top: 18px
+      font-size: 20px
+      padding-bottom: 22px
+      margin-right: 25px
+    &-recipe
+      letter-spacing: -0.7px
+      margin-right: 25px
+.info3__menu::-webkit-scrollbar 
+  width: 2px
+  background-color: #eaeaea
+.info3__menu::-webkit-scrollbar-thumb
+  width: 2px
+  height: 56px
+  background-color: #928b8b

@@ -10,15 +10,16 @@
     height: 373px
     display: flex
     justify-content: center
-    align-items: end
+    align-items: baseline
     flex-wrap: wrap
-    margin: auto
+    flex-direction: row
 .card
   display: block
   padding-top: 21px
   padding-bottom: 50px
   margin: 21px
   cursor: pointer
+  overflow: hidden
   &__title
     position: relative
     display: block
@@ -27,6 +28,10 @@
     margin-top: 12px
     letter-spacing: -1px
     text-align: left
+  &__img
+    transition: all 0.4s ease-in-out
+    &:hover
+      transform: scale(1.1)
 .info2
   color: #555555
   font-size: 18px

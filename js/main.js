@@ -1,7 +1,12 @@
 $(document).ready(function () {
-  let modal = $(".modal"); //помещаем модальное окно
-  modalBtn = $("[data-toggle = modal]"); //
-  closeBtn = $(".modal__close"); //
+  let modal = $(".modal"); //помещаем модальное окно avthor
+  modalBtn = $("[data-toggle = modal]"); //avthor
+  closeBtn = $(".modal__close"); //avthor
+
+  //LOGIN
+  let logIn = $(".logIn"); //помещаем модальное окно avthor
+  logInBtn = $("[data-toggle = logIn]"); //avthor
+  closeBtnlogIn = $(".logIn__close"); //avthor
 
   modalBtn.on("click", function () {
     //присваееваем класс
@@ -25,6 +30,31 @@ $(document).ready(function () {
     }
   });
 
+  //LOGIN
+  logInBtn.on("click", function () {
+    //присваееваем класс
+    logIn.toggleClass("logIn--visible");
+  });
+
+  closeBtnlogIn.on("click", function () {
+    //присваееваем класс
+    logIn.toggleClass("logIn--visible");
+  });
+  //закрытие по esc
+  $(document).keyup("click", function (event) {
+    if (event.which == "27") {
+      $(".logIn").removeClass("logIn--visible");
+    }
+  });
+  // закрытие по клику вне окна
+  $(document).click(function (e) {
+    if ($(e.target).is(".logIn")) {
+      logIn.toggleClass("logIn--visible");
+    }
+  });
+
+
+
   //открытие модального окна ПОДПИСКИ
   $(".modalSend-btn").on("click", function (event) {
     event.preventDefault();
@@ -46,22 +76,21 @@ $(document).ready(function () {
     $(".modalSend").fadeOut();
   });
 
-
   //слайдер recipe
-  var swiper = new Swiper('.slider-gallery', {
+  var swiper = new Swiper(".slider-gallery", {
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
   });
 
-  //слайдер recipees 
-  var swiper = new Swiper('.slider-gallery1');
-  //анимация 
+  //слайдер recipees
+  var swiper = new Swiper(".slider-gallery1");
+  //анимация
   new WOW().init();
 
   //маска для номера телефона
   $("[type=tel]").mask("+7(000)000-00-00", {
-    placeholder: "Ваш номер телефона:"
+    placeholder: "Ваш номер телефона:",
   });
 
   //плавный якорь
@@ -78,7 +107,7 @@ $(document).ready(function () {
        */
 
       $("html, body").animate({
-          scrollTop: dn
+          scrollTop: dn,
         },
         1000
       );
@@ -89,7 +118,6 @@ $(document).ready(function () {
     });
   });
 });
-
 
 [].forEach.call(document.querySelectorAll("img[data-src]"), function (img) {
   img.setAttribute("src", img.getAttribute("data-src"));

@@ -15,7 +15,6 @@
   z-index: 6
   margin-left: 20px
   margin-right: 20px
-
   &__logo
     padding-left: 94px
     padding-right: 45px
@@ -60,7 +59,6 @@
   transition: 0.4s ease-in-out
   transform: scale(0.3)
   z-index: 999
-
   li 
     a 
       padding: 10px 0
@@ -122,10 +120,12 @@
   align-items: center
   justify-content: space-around
   border: 1px solid #c2c2c2
-  width: 164px
   cursor: pointer
+  overflow: hidden
   &-img
-    margin: auto  
+    position: absolute
+    left: 5px 
+    top: 5px
   &:hover
     box-shadow: 0 0 13px rgba(11, 12, 12, 0.15)
 
@@ -138,13 +138,26 @@
     width: 20px
     height: 20px
     padding-right: 5px
+    padding-left: 5px
   &__enter
-    padding: 4px
+    padding: 0.2rem
     margin-right: 20px
     margin-left: 20px
   &__name
     font-size: 14px
     font-weight: 300
     text-transform: uppercase
-
+    padding-right: 5px
+.input
+  &-search
+    outline: none
+    border: none
+    background-color: #f8f8f8
+    font-size: 12px
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: -0.2px
+    max-width: 162px
+    min-height: 26px
+    text-align: center
 
