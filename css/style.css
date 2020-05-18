@@ -655,7 +655,8 @@ input.invalid {
   letter-spacing: -0.2px;
   max-width: 162px;
   min-height: 26px;
-  text-align: center; }
+  text-align: center;
+  padding-top: 5px; }
 
 .hero {
   margin-top: 86px;
@@ -1451,3 +1452,45 @@ input.invalid {
   display: block;
   margin-top: -17px;
   color: #921026; }
+
+.video {
+  margin-bottom: 85px; }
+  .video__fone {
+    position: relative;
+    max-width: 1120px;
+    height: 438px;
+    -webkit-box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    background: url(../img/shrimp2.jpg) no-repeat center/cover;
+    margin-left: 20px;
+    margin-right: 20px; }
+  .video__play {
+    position: absolute;
+    display: block;
+    width: 50px;
+    right: 50%;
+    top: 50%;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer; }
+    .video__play:hover {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2); }
+
+#button-up {
+  display: none;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  color: #000;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 15px;
+  z-index: 50; }
+  #button-up img {
+    width: 50px;
+    height: 50px; }
+  #button-up:hover {
+    cursor: pointer; }

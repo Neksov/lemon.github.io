@@ -101,7 +101,7 @@ $(document).ready(function () {
   //слайдер recipees
   var swiper = new Swiper(".slider-gallery1", {
     autoplay: {
-      delay: 3000,
+      delay: 8000,
     },
   });
   //анимация
