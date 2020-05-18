@@ -1,4 +1,4 @@
-.logIn
+.signIn
   opacity: 0
   visibility: hidden
   position: fixed
@@ -19,12 +19,13 @@
   &__dialog
     position: relative
     width: 328px
-    height: 406px
+    min-height: 535px
     box-shadow: 0 0 13px rgba(0, 0, 0, 0.15)
     background-color: #ffffff
     padding-top: 0px
     padding-left: 31px
     padding-right: 32px
+    padding-bottom: 31px
   &__close
     position: absolute
     right: 0
@@ -94,54 +95,49 @@
       transition: all 0.4s ease-in-out
       &:hover
         transform: scale(1.2)
-  &__accaunt
+  &__service
     position: relative
     opacity: 0.54
     color: $black
     font-family: "Josefin Sans"
-    font-size: 16px
+    font-style: italic
+    font-size: 14px
     font-weight: 400
     letter-spacing: -0.8px
-    text-align: center
+    text-align: left
     padding-top: 12px
     cursor: pointer
-    &::after //нижнее подчеркивание
-      position: absolute
-      content: ""
-      display: block
-      height: 1px
-      border-radius: 2px
-      background-color: $black
-      width: 0%
-      left: 50%
-      transition: width .3s ease-in-out
-      transform: translateX(-50%)
-    &:hover
-      &:after
-        width: 80%
-#checkBoxModal-error
-  position: absolute
-  margin-left: 4px
-  margin-top: 15px
-  color: $primary
-  opacity: 1
-#logIn-user-password-error
+    &-terms
+      color: #002dd6
+      letter-spacing: 0.35px
+      text-decoration: underline
+  &__login
+    color: $black
+    font-family: "Josefin Sans"
+    font-size: 12px
+    font-weight: 300
+    text-transform: uppercase
+    letter-spacing: 0.3px
+    margin-top: 15px
+#signIn-user-password-error
   position: absolute
   display: block
   margin-top: -17px
   color: $primary
-#logIn-user-name-error
+#signIn-user-password2-error
   position: absolute
   display: block
   margin-top: -17px
   color: $primary
-.sea
-  width: 20px
+#signIn-user-name-error
   position: absolute
-  right: 40px
-  bottom: 200px
-  cursor: pointer
-  transition: all .4s ease-in-out
-  &:hover
-    transform: scale(1.2)
+  display: block
+  margin-top: -17px
+  color: $primary
+#signIn-user-email-error
+  position: absolute
+  display: block
+  margin-top: -17px
+  color: $primary
+
 

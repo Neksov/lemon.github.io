@@ -26,14 +26,7 @@
           </div>
           <nav>
             <ul class="topmenu">
-              <li><a href="#">Home</a>
-                <ul class="submenu">
-                  <li><a href="#">RECOMMENDED</a></li>
-                  <li><a href="#">POPULAR</a></li>
-                  <li><a href="#"> QUICK & EASY</a></li>
-                  <li><a href="#">HEALTHY</a></li>
-                  <li><a href="#">NEWEST</a></li>
-                </ul>
+              <li><a href="index.html">Home</a>
               </li>
               <li>
                 <a href="#">Recipes</a>
@@ -46,32 +39,15 @@
                 </ul>
               </li>
               <li>
-                <a href="#">Photo Galleries</a>
-                <ul class="submenu2">
-                  <li><a href="#">RECOMMENDED</a></li>
-                  <li><a href="#">POPULAR</a></li>
-                  <li><a href="#"> QUICK & EASY</a></li>
-                  <li><a href="#">HEALTHY</a></li>
-                  <li><a href="#">NEWEST</a></li>
-                </ul>
+                <a href="#recipees">Photo Galleries</a>
               </li>
-              <li><a href="#">Videos</a>
-                <ul class="submenu">
-                  <li><a href="#">RECOMMENDED</a></li>
-                  <li><a href="#">POPULAR</a></li>
-                  <li><a href="#"> QUICK & EASY</a></li>
-                  <li><a href="#">HEALTHY</a></li>
-                  <li><a href="#">NEWEST</a></li>
-                </ul>
+              <li>
+                <a href="#">Videos</a>
+
               </li>
-              <li><a href="#">All Categories</a>
-                <ul class="submenu2">
-                  <li><a href="#">RECOMMENDED</a></li>
-                  <li><a href="#">POPULAR</a></li>
-                  <li><a href="#"> QUICK & EASY</a></li>
-                  <li><a href="#">HEALTHY</a></li>
-                  <li><a href="#">NEWEST</a></li>
-                </ul>
+              <li>
+                <a href="#">All Categories</a>
+
               </li>
             </ul>
           </nav>
@@ -160,7 +136,7 @@
         </div>
       </div>
     </section>
-    <section class="recipees">
+    <section class="recipees" id="recipees">
       <div class="container">
         <!-- Swiper -->
         <div class="swiper-container slider-gallery1">
@@ -418,11 +394,12 @@
       <form action="logIn.php" method="POST" class="form logIn__form">
         <div class="input-group logIn__input-group">
           <input type="text" name="userName" class="input form__input logIn__input" id="logIn-user-name"
-            placeholder="email or login" />
+            placeholder="email or login" maxlength="30" />
         </div>
         <div class="input-group logIn__input-group">
           <input type="password" name="userPassword" class="input form__input logIn__input" id="logIn-user-password"
-            placeholder="password" />
+            placeholder="password" maxlength="30" />
+          <img src="img/eye-solid.svg" alt="sea password" class="sea">
         </div>
         <div class="input-group logIn__input-group">
           <div class="policy logIn__policy">
@@ -440,8 +417,50 @@
         <a href="https://ru-ru.facebook.com/" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
         <a href="https://www.google.com/" target="_blank"><img src="img/google.png" alt="google"></a>
       </div>
-      <div class="logIn__accaunt">
+      <div class="logIn__accaunt" data-toggle="signIn">
         Don’t have an accont? Sign in
+      </div>
+    </div>
+  </div>
+  <!-- Модальне окно SignIn-->
+  <div class="signIn">
+    <div class="signIn__dialog">
+      <button class="signIn__close"></button>
+      <h3 class="signIn__title">
+        Sign in
+      </h3>
+      <h4 class="signIn__lemon">Sign in for LEMON</h4>
+      <form action="signIn.php" method="POST" class="form signIn__form">
+        <div class="input-group signIn__input-group">
+          <input type="text" name="userName" class="input form__input signIn__input" id="signIn-user-name"
+            placeholder="user name" maxlength="30" />
+        </div>
+        <div class="input-group signIn__input-group">
+          <input type="email" autocomplete="off" name="userEmail" class="input form__input signIn__input"
+            id="signIn-user-email" placeholder="e-mail" maxlength="30" />
+        </div>
+        <div class="input-group signIn__input-group">
+          <input type="text" name="userPassword" class="input form__input signIn__input" id="signIn-user-password"
+            placeholder="password" maxlength="30" />
+        </div>
+        <div class="input-group signIn__input-group">
+          <input type="text" name="userPassword2" class="input form__input signIn__input" id="signIn-user-password2"
+            placeholder="reapet password" maxlength="30" />
+        </div>
+        <button class="btn btn--light signIn__btn">
+          SIGN UP
+        </button>
+      </form>
+      <div class="signIn__social">
+        <a href="https://ru-ru.facebook.com/" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
+        <a href="https://www.google.com/" target="_blank"><img src="img/google.png" alt="google"></a>
+      </div>
+      <div class="signIn__service">
+        By joining LEMON, you agree to our<br>
+        <a href="#" class="signIn__service-terms">Terms of Service.</a>
+      </div>
+      <div class="signIn__login">
+        Login
       </div>
     </div>
   </div>

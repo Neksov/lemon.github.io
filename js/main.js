@@ -3,10 +3,17 @@ $(document).ready(function () {
   modalBtn = $("[data-toggle = modal]"); //avthor
   closeBtn = $(".modal__close"); //avthor
 
+
   //LOGIN
   let logIn = $(".logIn"); //помещаем модальное окно avthor
   logInBtn = $("[data-toggle = logIn]"); //avthor
   closeBtnlogIn = $(".logIn__close"); //avthor
+  closeLogin = $(".logIn__accaunt");
+
+  //SIGNIN
+  let signIn = $(".signIn"); //помещаем модальное окно avthor
+  signInBtn = $("[data-toggle = signIn]"); //avthor
+  closeBtnsignIn = $(".signIn__close"); //avthor
 
   modalBtn.on("click", function () {
     //присваееваем класс
@@ -28,6 +35,11 @@ $(document).ready(function () {
     if ($(e.target).is(".modal")) {
       modal.toggleClass("modal--visible");
     }
+  });
+
+  closeLogin.on("click", function () {
+    //присваееваем класс
+    logIn.toggleClass("logIn--visible");
   });
 
   //LOGIN
@@ -53,27 +65,27 @@ $(document).ready(function () {
     }
   });
 
-
-
-  //открытие модального окна ПОДПИСКИ
-  $(".modalSend-btn").on("click", function (event) {
-    event.preventDefault();
-    $(".modalSend").fadeIn();
+  //SIGNIN
+  signInBtn.on("click", function () {
+    //присваееваем класс
+    signIn.toggleClass("signIn--visible");
   });
-  //закрытие модального окна подписки по крестику
-  $(".modalSend-close").on("click", function (event) {
-    event.preventDefault();
-    $(".modalSend").fadeOut();
+
+  closeBtnsignIn.on("click", function () {
+    //присваееваем класс
+    signIn.toggleClass("signIn--visible");
   });
   //закрытие по esc
   $(document).keyup("click", function (event) {
     if (event.which == "27") {
-      $(".modalSend").fadeOut();
+      $(".signIn").removeClass("signIn--visible");
     }
   });
   // закрытие по клику вне окна
-  $(document).on("click", function (e) {
-    $(".modalSend").fadeOut();
+  $(document).click(function (e) {
+    if ($(e.target).is(".signIn")) {
+      signIn.toggleClass("signIn--visible");
+    }
   });
 
   //слайдер recipe
@@ -81,16 +93,137 @@ $(document).ready(function () {
     pagination: {
       el: ".swiper-pagination",
     },
+    autoplay: {
+      delay: 3000,
+    },
   });
 
   //слайдер recipees
-  var swiper = new Swiper(".slider-gallery1");
+  var swiper = new Swiper(".slider-gallery1", {
+    autoplay: {
+      delay: 3000,
+    },
+  });
   //анимация
   new WOW().init();
 
-  //маска для номера телефона
-  $("[type=tel]").mask("+7(000)000-00-00", {
-    placeholder: "Ваш номер телефона:",
+  //валидация форм
+  $(".logIn__form").validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 30
+      },
+      userPassword: {
+        required: true,
+        minlength: 2,
+        maxlength: 30
+      },
+      checkBoxModal: "required",
+    },
+    //сообщения
+    messages: {
+      userName: {
+        required: "Имя или e-mail обязательно",
+        minlength: "Не короче 2 символов",
+        maxlength: "Не длиньше 30 символов"
+      },
+      userPassword: {
+        required: "Пароль обязателен",
+        minlength: "Не короче 2 символов",
+        maxlength: "Не длиньше 30 символов"
+      },
+      checkBoxModal: "Сохранить Вас?",
+    },
+    //отправка формы через аякс
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "logIn.php",
+        data: $(".logIn__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
+        success: function (response) {
+          $(form)[0].reset(); // чистит поля после отправки формы
+          logIn.removeClass("logIn--visible");
+
+          $(".logIn__dialog").fadeOut();
+        }
+      });
+    }
+  });
+
+  $(".signIn__form").validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 30
+      },
+      userEmail: {
+        required: true,
+        email: true
+      },
+      userPassword: {
+        required: true,
+        minlength: 2,
+        maxlength: 30
+      },
+      userPassword2: {
+        required: true,
+        minlength: 2,
+        maxlength: 30
+      }
+    },
+    //сообщения
+    messages: {
+      userName: {
+        required: "Имя или e-mail обязательно",
+        minlength: "Не короче 2 символов",
+        maxlength: "Не длиньше 30 символов"
+      },
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формате: name@domain.com"
+      },
+      userPassword: {
+        required: "Пароль обязателен",
+        minlength: "Не короче 2 символов",
+        maxlength: "Не длиньше 30 символов"
+      },
+      userPassword2: {
+        required: "Повторите пароль",
+        minlength: "Не короче 2 символов",
+        maxlength: "Не длиньше 30 символов"
+      }
+    },
+    //отправка формы через аякс
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "signIn.php",
+        data: $(".signIn__form").serialize(), //Преобразует данные формы в строку, пригодную для использования в URL
+        success: function (response) {
+          $(form)[0].reset(); // чистит поля после отправки формы
+          signIn.removeClass("signIn--visible");
+        }
+      });
+    }
+  });
+
+  $('body').on('click', '.sea', function () {
+    if ($('#logIn-user-password').attr('type') == 'password') {
+      $(this).addClass('.sea');
+      $('#logIn-user-password').attr('type', 'text');
+    } else {
+      $(this).removeClass('.sea');
+      $('#logIn-user-password').attr('type', 'password');
+
+    }
+    return false;
   });
 
   //плавный якорь
