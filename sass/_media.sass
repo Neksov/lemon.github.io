@@ -1,1 +1,798 @@
+@media  screen and (min-width : 1024px) and (max-width : 1200px)
+  .menu
+    &__logo 
+      padding-right: 10px
+      padding-left: 50px
+  .topmenu li a
+    padding: 5px
+  .card
+    margin: 7px
+  .info3
+    &__btn
+      &-author 
+        margin-left: 30px
+@media  screen and (min-width : 992px) and (max-width : 1023px)
+  .menu
+    &__logo 
+      padding-right: 10px
+      padding-left: 50px
+  .topmenu li a
+    padding: 5px
+  .slider-gallery1__slide 
+    height: 650px
+  .card
+    padding-bottom: 0
+    padding-top: 0
+  .info3
+    &__btn
+      &-author 
+        margin-left: 30px
+  .topmenu2 li a
+    padding: 5px
+@media  screen and (min-width : 768px) and (max-width : 991px)
+  #menu__toggle 
+    opacity: 0
+  #menu__toggle:checked ~ .menu__btn > span 
+    transform: rotate(45deg)
+  #menu__toggle:checked ~ .menu__btn > span::before 
+    top: 0
+    transform: rotate(0)
+  #menu__toggle:checked ~ .menu__btn > span::after 
+    top: 0
+    transform: rotate(90deg)
+  #menu__toggle:checked ~ .topmenu 
+    visibility: visible
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    padding: 50px
+  .menu__btn 
+    position: absolute
+    right: 20px
+    width: 26px
+    height: 26px
+    top: 60px
+    cursor: pointer
+    z-index: 1
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after 
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: #616161
+    transition-duration: .25s
+  .menu__btn > span::before 
+    content: ''
+    top: -8px
+  .menu__btn > span::after 
+    content: ''
+    top: 8px
+  .menu__showsub 
+    position: absolute
+    right: -20px
+    margin-top: -34px
+    padding: 10px
+    line-height: normal
+  .submenu
+    list-style: none
+    padding: 0
+    color: #fff
+    overflow: hidden
+    font-size: .8em
+    background-color: #ddd
+    max-height: 0
+    transition: max-height .3s ease-in-out
+  .header
+    &__logo
+      padding-top: 2rem
+      padding-bottom: 2rem
 
+  .topmenu 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #ECEFF1
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+  .menu__item 
+    display: block
+    padding: 12px 24px
+    color: #333
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    font-weight: 600
+    text-decoration: none
+    transition-duration: .25s
+  .menu__item:hover 
+    background-color: #CFD8DC
+  .btn__enter 
+    margin-right: 120px
+  .menu
+    &__logo 
+      padding-right: 10px
+      padding-left: 50px
+  .topmenu li a
+    padding: 5px
+  .slider-gallery1__slide 
+    height: 650px
+  .card
+    padding-bottom: 0
+    padding-top: 0
+  .info3
+    &__btn
+      &-author 
+        margin-left: 30px
+  .page
+    &__img
+      display: none 
+  .info3
+    margin: auto
+    padding-top: 30px
+    padding-bottom: 30px
+  .footer
+    position: relative
+    &__logo 
+      position: absolute
+      top: 70px
+    &__social
+      position: absolute
+      left: 86px
+      bottom: 130px
+  .topmenu2
+    align-items: flex-end
+    display: flex
+    flex-direction: column
+  nav
+    padding-top: 80px
+    padding-right: 30px
+    li
+      a
+        padding: 5px
+  .menu2
+    height: 310px
+    display: block
+  .footer
+    &__copyright
+      position: relative
+      margin-top: 20px
+      margin-right: 35px
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 90%
+      height: 2px
+      background-color: #555555
+      opacity: 0.2
+      left: 35px
+      top: 250px
+
+@media  screen and (min-width : 480px) and (max-width : 767px)
+  #menu__toggle 
+    opacity: 0
+  #menu__toggle:checked ~ .menu__btn > span 
+    transform: rotate(45deg)
+  #menu__toggle:checked ~ .menu__btn > span::before 
+    top: 0
+    transform: rotate(0)
+  #menu__toggle:checked ~ .menu__btn > span::after 
+    top: 0
+    transform: rotate(90deg)
+  #menu__toggle:checked ~ .topmenu 
+    visibility: visible
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    padding: 50px
+  .menu__btn 
+    position: absolute
+    right: 20px
+    width: 26px
+    height: 26px
+    top: 60px
+    cursor: pointer
+    z-index: 1
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after 
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: #616161
+    transition-duration: .25s
+  .menu__btn > span::before 
+    content: ''
+    top: -8px
+  .menu__btn > span::after 
+    content: ''
+    top: 8px
+  .menu__showsub 
+    position: absolute
+    right: -20px
+    margin-top: -34px
+    padding: 10px
+    line-height: normal
+  .submenu
+    list-style: none
+    padding: 0
+    color: #fff
+    overflow: hidden
+    font-size: .8em
+    background-color: #ddd
+    max-height: 0
+    transition: max-height .3s ease-in-out
+  .header
+    &__logo
+      padding-top: 2rem
+      padding-bottom: 2rem
+  .hero
+    &__info
+      margin-left: 30px
+  .topmenu 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #ECEFF1
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+  .menu__item 
+    display: block
+    padding: 12px 24px
+    color: #333
+    font-family: 'Roboto', sans-serif
+    font-size: 20px
+    font-weight: 600
+    text-decoration: none
+    transition-duration: .25s
+  .menu__item:hover 
+    background-color: #CFD8DC
+  .btn__enter 
+    margin-right: 60px
+  .menu
+    &__logo 
+      padding-right: 0px
+      padding-left: 20px
+  .topmenu li a
+    padding: 5px
+  .slider-gallery1__slide 
+    height: 950px
+  .card
+    padding-bottom: 0
+    padding-top: 0
+  .info3
+    margin: 1rem
+    &__btn
+      &-author 
+        margin-left: 30px
+  .page
+    &__img
+      display: none 
+  .footer
+    position: relative
+    &__logo 
+      position: absolute
+      top: 70px
+    &__social
+      position: absolute
+      left: 86px
+      bottom: 130px
+  .topmenu2
+    align-items: flex-end
+    display: flex
+    flex-direction: column
+  nav
+    padding-top: 80px
+    padding-right: 30px
+    li
+      a
+        padding: 5px
+  .menu2
+    height: 310px
+    display: block
+  .footer
+    &__copyright
+      position: relative
+      margin-top: 20px
+      margin-right: 35px
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 90%
+      height: 2px
+      background-color: #555555
+      opacity: 0.2
+      left: 35px
+      top: 250px
+  .modal
+    &__dialog 
+      width: 450px
+      margin: 2rem
+      padding-right: 20px
+      margin-top: 15rem
+    &__name
+      &::before 
+        width: 343px
+  .info4
+    &__title
+      &::after
+        width: 200px
+  .video
+    &__play
+      right: 42%
+  .recipe__page
+    justify-content: center
+  .signIn__dialog 
+    margin-top: 15rem
+@media  screen and (min-width : 370px) and (max-width : 479px)
+  #menu__toggle 
+    opacity: 0
+  #menu__toggle:checked ~ .menu__btn > span 
+    transform: rotate(45deg)
+  #menu__toggle:checked ~ .menu__btn > span::before 
+    top: 0
+    transform: rotate(0)
+  #menu__toggle:checked ~ .menu__btn > span::after 
+    top: 0
+    transform: rotate(90deg)
+  #menu__toggle:checked ~ .topmenu 
+    visibility: visible
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    padding: 50px
+  .menu__btn 
+    position: absolute
+    right: 11px
+    width: 26px
+    height: 26px
+    top: 61px
+    cursor: pointer
+    z-index: 1
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after 
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: #616161
+    transition-duration: .25s
+  .menu__btn > span::before 
+    content: ''
+    top: -8px
+  .menu__btn > span::after 
+    content: ''
+    top: 8px
+  .menu__showsub 
+    position: absolute
+    right: -20px
+    margin-top: -34px
+    padding: 10px
+    line-height: normal
+  .submenu
+    list-style: none
+    padding: 0
+    color: #fff
+    overflow: hidden
+    font-size: .8em
+    background-color: #ddd
+    max-height: 0
+    transition: max-height .3s ease-in-out
+  .header
+    &__logo
+      padding-top: 0rem
+      padding-bottom: 0rem
+      &-logo
+        display: none
+        padding-bottom: 0
+
+  .topmenu 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #ECEFF1
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+  .menu
+    box-shadow: none
+    margin-left: 0
+    margin-right: 0 
+    &__item
+      display: block
+      padding: 12px 24px
+      color: #333
+      font-family: 'Roboto', sans-serif
+      font-size: 20px
+      font-weight: 600
+      text-decoration: none
+      transition-duration: .25s
+      &:hover 
+        background-color: #CFD8DC
+    &__logo 
+      padding-right: 10px
+      padding-left: 10px
+    &__search
+      margin-right: 100px
+  .btn
+    &__enter 
+      position: absolute
+      top: 48px
+      right: 30px
+      z-index: -100
+
+    &__name
+      display: none
+    &-images
+      width: 30px
+  .topmenu li a
+    padding: 5px
+  .slider-gallery1__slide 
+    height: 970px
+  .card
+    padding-bottom: 0
+    padding-top: 0
+  .page
+    background-color: #f8f8f8
+  .info3
+    margin: 1rem
+    &__btn
+      margin-left: 20px
+      padding-right: 5px
+      padding-left: 5px
+      font-size: 10px
+      &-author 
+        margin-left: 10px
+        font-size: 10px
+    &__menu
+      &-recipe 
+        margin-right: 10px
+        padding-bottom: 20px
+
+  .page
+    &__img
+      display: none 
+  .footer
+    position: relative
+    &__logo 
+      position: absolute
+      top: 70px
+    &__social
+      position: absolute
+      left: 86px
+      bottom: 130px
+  .topmenu2
+    align-items: flex-end
+    display: flex
+    flex-direction: column
+  nav
+    padding-top: 80px
+    padding-right: 30px
+    li
+      a
+        padding: 5px
+  .menu2
+    height: 310px
+    display: block
+  .footer
+    &__copyright
+      position: relative
+      margin-top: 20px
+      margin-right: 35px
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 90%
+      height: 2px
+      background-color: #555555
+      opacity: 0.2
+      left: 35px
+      top: 250px
+  .modal
+    &__dialog 
+      width: 450px
+      margin: 2rem
+      padding: 10px
+      margin-top: 15rem
+    &__name
+      &::before 
+        width: 180px
+  .info4
+    &__title
+      &::after
+        width: 160px
+        top: 170px
+  .hero
+    margin: 0
+    &__info
+      margin-left: 30px
+  .recipees
+    margin: 0
+  .swiper-container
+    box-shadow: none
+  .recipe
+    margin: 0
+  .info
+    &__text
+      width: 280px
+  .video
+    margin-top: 20px
+    &__fone
+      margin: 0
+      margin-bottom: -86px
+    &__play
+      right: 39%
+  body
+    background-color: #f8f8f8
+  .footer
+    margin-left: 0
+    margin-right: 0
+    &__logo 
+      margin-left: 30px
+    &__social
+      left: 30px
+  .signIn__dialog 
+    margin-top: 15rem
+@media  screen and (min-width : 320px) and (max-width : 369px)
+  #menu__toggle 
+    opacity: 0
+  #menu__toggle:checked ~ .menu__btn > span 
+    transform: rotate(45deg)
+  #menu__toggle:checked ~ .menu__btn > span::before 
+    top: 0
+    transform: rotate(0)
+  #menu__toggle:checked ~ .menu__btn > span::after 
+    top: 0
+    transform: rotate(90deg)
+  #menu__toggle:checked ~ .topmenu 
+    visibility: visible
+    left: 0
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    padding: 50px
+  .menu__btn 
+    position: absolute
+    right: 11px
+    width: 26px
+    height: 26px
+    top: 61px
+    cursor: pointer
+    z-index: 1
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after 
+    display: block
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: #616161
+    transition-duration: .25s
+  .menu__btn > span::before 
+    content: ''
+    top: -8px
+  .menu__btn > span::after 
+    content: ''
+    top: 8px
+  .menu__showsub 
+    position: absolute
+    right: -20px
+    margin-top: -34px
+    padding: 10px
+    line-height: normal
+  .submenu
+    list-style: none
+    padding: 0
+    color: #fff
+    overflow: hidden
+    font-size: .8em
+    background-color: #ddd
+    max-height: 0
+    transition: max-height .3s ease-in-out
+  .header
+    &__logo
+      padding-top: 0rem
+      padding-bottom: 0rem
+      &-logo
+        display: none
+        padding-bottom: 0
+  .recipe__page
+    justify-content: center
+  .topmenu 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    left: -100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #ECEFF1
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+  .menu
+    box-shadow: none
+    margin-left: 0
+    margin-right: 0 
+    &__item
+      display: block
+      padding: 12px 24px
+      color: #333
+      font-family: 'Roboto', sans-serif
+      font-size: 20px
+      font-weight: 600
+      text-decoration: none
+      transition-duration: .25s
+      &:hover 
+        background-color: #CFD8DC
+    &__logo 
+      padding-right: 10px
+      padding-left: 10px
+    &__search
+      margin-right: 60px
+  .btn
+    &__enter 
+      position: absolute
+      top: 10px
+      right: 0
+    &__name
+      display: none
+    &-images
+      width: 30px
+  .topmenu li a
+    padding: 5px
+  .slider-gallery1__slide 
+    height: 970px
+  .card
+    padding-bottom: 0
+    padding-top: 0
+  .page
+    background-color: #f8f8f8
+  .info3
+    margin: 1rem
+    &__btn
+      margin-left: 5px
+      padding-right: 2px
+      padding-left: 2px
+      font-size: 10px
+      &-author 
+        margin-left: 0px
+        font-size: 10px
+    &__menu
+      &-recipe 
+        margin-right: 10px
+        padding-bottom: 20px
+  .page
+    &__img
+      display: none 
+  .footer
+    position: relative
+    &__logo 
+      position: absolute
+      top: 70px
+    &__social
+      position: absolute
+      left: 86px
+      bottom: 130px
+  .topmenu2
+    align-items: flex-end
+    display: flex
+    flex-direction: column
+  nav
+    padding-top: 80px
+    padding-right: 30px
+    li
+      a
+        padding: 5px
+  .menu2
+    height: 310px
+    display: block
+  .footer
+    &__copyright
+      position: relative
+      margin-top: 20px
+      margin-right: 35px
+    &::before
+      position: absolute
+      display: block
+      content: ''
+      width: 90%
+      height: 2px
+      background-color: #555555
+      opacity: 0.2
+      left: 35px
+      top: 250px
+  .modal
+    &__dialog 
+      width: 450px
+      margin: 2rem
+      padding: 10px
+      margin-top: 15rem
+    &__name
+      &::before 
+        width: 180px
+  .info4
+    &__title
+      &::after
+        width: 180px
+        top: 310px
+  .hero
+    margin: 0
+    &__info
+      margin-left: 30px
+  .recipees
+    margin: 0
+  .swiper-container
+    box-shadow: none
+  .recipe
+    margin: 0
+  .info
+    &__text
+      width: 280px
+  .video
+    margin-top: 20px
+    &__fone
+      margin: 0
+      margin-bottom: -86px
+    &__play
+      right: 39%
+  body
+    background-color: #f8f8f8
+  .footer
+    margin-left: 0
+    margin-right: 0
+    &__logo 
+      margin-left: 30px
+    &__social
+      left: 30px
+  .contacts
+    flex-wrap: wrap
+  .signIn__dialog 
+    margin-top: 15rem
+@media only screen and (max-width : 991px) 
+  .animated 
+    -o-transition-property: none !important
+    -moz-transition-property: none !important
+    -ms-transition-property: none !important
+    -webkit-transition-property: none !important
+    transition-property: none !important
+    -o-transform: none !important
+    -moz-transform: none !important
+    -ms-transform: none !important
+    -webkit-transform: none !important
+    transform: none !important
+    -webkit-animation: none !important
+    -moz-animation: none !important
+    -o-animation: none !important
+    -ms-animation: none !important
+    animation: none !important
